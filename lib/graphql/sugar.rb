@@ -9,7 +9,8 @@ module GraphQL
       decimal: GraphQL::FLOAT_TYPE,
       boolean: GraphQL::BOOLEAN_TYPE,
       string: GraphQL::STRING_TYPE,
-      datetime: GraphQL::DATETIME_TYPE
+      date: GraphQL::Types::ISO8601Date.graphql_definition,
+      datetime: GraphQL::Types::ISO8601DateTime.graphql_definition
     }.freeze
 
     def self.get_resolver_graphql_type(field_name)
